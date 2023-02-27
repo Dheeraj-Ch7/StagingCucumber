@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: StepDefinitions.TestRunner
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 85.682 s <<< FAILURE! - in StepDefinitions.TestRunner
+ILTS(ILTS REVAMP PART03)  Time elapsed: 18.636 s  <<< ERROR!
+org.openqa.selenium.NoSuchElementException: 
+Unable to find element with locator By.xpath: //button[text()='REGISTER NOW']
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.8.0', revision: '267030adea'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.6'
+Driver info: driver.version: RemoteWebDriver
+

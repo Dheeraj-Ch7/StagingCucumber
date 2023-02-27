@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports (no 1) - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+        <th>Number</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>cucumberReporting</td>
+        <td>1</td>
+      <td>27 Feb 2023, 14:41</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+      <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+  </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+              <td class="location">StepDefinitions.Login.And_Click_on_Profile_Btn_and_Click_on_My_Profile()</td>
+              <td>1</td>
+              <td class="duration" data-value="3141070700">3.141</td>
+              <td class="duration" data-value="3141070700">3.141</td>
+              <td class="duration" data-value="3141070700">3.141</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinitions.Login.Click_on_SubmitBtn()</td>
+              <td>1</td>
+              <td class="duration" data-value="3217600">0.003</td>
+              <td class="duration" data-value="3217600">0.003</td>
+              <td class="duration" data-value="3217600">0.003</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinitions.Login.Click_on_Tests()</td>
+              <td>1</td>
+              <td class="duration" data-value="2265021300">2.265</td>
+              <td class="duration" data-value="2265021300">2.265</td>
+              <td class="duration" data-value="2265021300">2.265</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinitions.Login.Clk_on_AttemptNow_Btn_User_navigate_to_Test_Taking_Instructions()</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinitions.Login.Clk_on_Edt_Slt_Grade10_Board_Cbse_and_Save()</td>
+              <td>1</td>
+              <td class="duration" data-value="1729933400">1.729</td>
+              <td class="duration" data-value="1729933400">1.729</td>
+              <td class="duration" data-value="1729933400">1.729</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinitions.Login.Clk_on_Edt_Slt_Grade11_SltPCB_Board_Tlngna_and_Save()</td>
+              <td>1</td>
+              <td class="duration" data-value="1740176400">1.740</td>
+              <td class="duration" data-value="1740176400">1.740</td>
+              <td class="duration" data-value="1740176400">1.740</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinitions.Login.Clk_on_Edt_Slt_Grade11_SltPCMB_Board_Tlngna_and_Save()</td>
+              <td>1</td>
+              <td class="duration" data-value="1771163800">1.771</td>
+              <td class="duration" data-value="1771163800">1.771</td>
+              <td class="duration" data-value="1771163800">1.771</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinitions.Login.Clk_on_Edt_Slt_Grade11_SltPCM_Board_Tlngna_and_Save()</td>
+              <td>1</td>
+              <td class="duration" data-value="1770125200">1.770</td>
+              <td class="duration" data-value="1770125200">1.770</td>
+              <td class="duration" data-value="1770125200">1.770</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinitions.Login.Clk_on_Edt_Slt_Grade1_Board_Cbse_and_Save()</td>
+              <td>1</td>
+              <td class="duration" data-value="1684877000">1.684</td>
+              <td class="duration" data-value="1684877000">1.684</td>
+              <td class="duration" data-value="1684877000">1.684</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinitions.Login.Clk_on_Edt_Slt_Grade2_Board_Cbse_and_Save()</td>
+              <td>1</td>
+              <td class="duration" data-value="1735065100">1.735</td>
+              <td class="duration" data-value="1735065100">1.735</td>
+              <td class="duration" data-value="1735065100">1.735</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinitions.Login.Clk_on_Edt_Slt_Grade3_Board_Cbse_and_Save()</td>
+              <td>1</td>
+              <td class="duration" data-value="1711885900">1.711</td>
+              <td class="duration" data-value="1711885900">1.711</td>
+              <td class="duration" data-value="1711885900">1.711</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinitions.Login.Clk_on_Edt_Slt_Grade4_Board_Cbse_and_Save()</td>
+              <td>1</td>
+              <td class="duration" data-value="1715190800">1.715</td>
+              <td class="duration" data-value="1715190800">1.715</td>
+              <td class="duration" data-value="1715190800">1.715</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinitions.Login.Clk_on_Edt_Slt_Grade5_Board_Cbse_and_Save()</td>
+              <td>1</td>
+              <td class="duration" data-value="1746559400">1.746</td>
+              <td class="duration" data-value="1746559400">1.746</td>
+              <td class="duration" data-value="1746559400">1.746</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinitions.Login.Clk_on_Edt_Slt_Grade6_Board_Cbse_and_Save()</td>
+              <td>1</td>
+              <td class="duration" data-value="1666888700">1.666</td>
+              <td class="duration" data-value="1666888700">1.666</td>
+              <td class="duration" data-value="1666888700">1.666</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinitions.Login.Clk_on_Edt_Slt_Grade7_Board_Cbse_and_Save()</td>
+              <td>1</td>
+              <td class="duration" data-value="1769721100">1.769</td>
+              <td class="duration" data-value="1769721100">1.769</td>
+              <td class="duration" data-value="1769721100">1.769</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinitions.Login.Clk_on_Edt_Slt_Grade8_Board_Cbse_and_Save()</td>
+              <td>1</td>
+              <td class="duration" data-value="1780483400">1.780</td>
+              <td class="duration" data-value="1780483400">1.780</td>
+              <td class="duration" data-value="1780483400">1.780</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinitions.Login.Clk_on_Edt_Slt_Grade9_Board_Cbse_and_Save()</td>
+              <td>1</td>
+              <td class="duration" data-value="1718922800">1.718</td>
+              <td class="duration" data-value="1718922800">1.718</td>
+              <td class="duration" data-value="1718922800">1.718</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinitions.Login.Clk_on_ILTS_Card_and_Clk_on_RegisterNow()</td>
+              <td>1</td>
+              <td class="duration" data-value="11678368500">11.678</td>
+              <td class="duration" data-value="11678368500">11.678</td>
+              <td class="duration" data-value="11678368500">11.678</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinitions.Login.Slt_TrgtExm_Apt_and_Save_and_Vrfy_Trgt_Updtd_pop()</td>
+              <td>5</td>
+              <td class="duration" data-value="2477989760">2.477</td>
+              <td class="duration" data-value="2477989760">2.526</td>
+              <td class="duration" data-value="12389948800">12.389</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinitions.Login.Slt_TrgtExm_Cbse_Neet_Jee_JeeAdv_CUET_and_Sve_Vrfy_Trgt_Updtd()</td>
+              <td>1</td>
+              <td class="duration" data-value="2866504600">2.866</td>
+              <td class="duration" data-value="2866504600">2.866</td>
+              <td class="duration" data-value="2866504600">2.866</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinitions.Login.Slt_TrgtExm_Cbse_Neet_Jee_JeeAdv_and_Sve_Vrfy_Trgt_Updtd()</td>
+              <td>1</td>
+              <td class="duration" data-value="2685120900">2.685</td>
+              <td class="duration" data-value="2685120900">2.685</td>
+              <td class="duration" data-value="2685120900">2.685</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinitions.Login.Slt_TrgtExm_Cbse_Neet_Jee_and_Sve_Vrfy_Trgt_Updtd()</td>
+              <td>2</td>
+              <td class="duration" data-value="2606123150">2.606</td>
+              <td class="duration" data-value="2606123150">2.610</td>
+              <td class="duration" data-value="5212246300">5.212</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinitions.Login.Slt_TrgtExm_Cbse_and_Found_and_Sve_Vrfy_Trgt_Updtd()</td>
+              <td>3</td>
+              <td class="duration" data-value="2501908100">2.501</td>
+              <td class="duration" data-value="2501908100">2.566</td>
+              <td class="duration" data-value="7505724300">7.505</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinitions.Login.Slt_TrgtExm_Neet_Jee_JeeAdv_and_Save_and_Vrfy_Trgt_Updtd()</td>
+              <td>1</td>
+              <td class="duration" data-value="2613911300">2.613</td>
+              <td class="duration" data-value="2613911300">2.613</td>
+              <td class="duration" data-value="2613911300">2.613</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinitions.Login.User_enters_Password_and_click_on_loginbtn(java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="135254750">0.135</td>
+              <td class="duration" data-value="135254750">0.136</td>
+              <td class="duration" data-value="270509500">0.270</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinitions.Login.User_navigate_to_Genarting_Detailed_Report()</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinitions.Login.User_navigate_to_test_paper_anser_the_question_and_save()</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinitions.Login.Verify_Your_report_will_be_generated_in_time()</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinitions.Login.user_Phonenumber_and_click_on_login_with_password(java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="168663100">0.168</td>
+              <td class="duration" data-value="168663100">0.170</td>
+              <td class="duration" data-value="337326200">0.337</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">StepDefinitions.Login.user_launch_chrome_browser()</td>
+              <td>2</td>
+              <td class="duration" data-value="3609264300">3.609</td>
+              <td class="duration" data-value="3609264300">4.234</td>
+              <td class="duration" data-value="7218528600">7.218</td>
+              <td class="passed">100.00%</td>
+            </tr>
+        </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>30</td>
+            <td>40</td>
+            <td class="duration">2.018</td>
+            <td class="duration">12.389</td>
+            <td class="duration">1:20.728</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
